@@ -68,7 +68,9 @@ export const SideBar = ({
           <NavCTA />
         </div>
         {/* logo for large screen */}
-        <Logo />
+        <div className=" hidden lg:block">
+          <Logo />
+        </div>
       </div>
 
       {/* links */}

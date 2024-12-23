@@ -7,8 +7,9 @@ import communicationIcon from "../assets/sidebarIcons/communicationIcon.svg";
 import contactsIcon from "../assets/sidebarIcons/contactsIcon.svg";
 import dashboardIcon from "../assets/sidebarIcons/dashboardIcon.svg";
 import financeIcon from "../assets/sidebarIcons/financeIcon.svg";
-import inventoryIcon from "../assets/sidebarIcons/inventoryIcon.svg";
+import inventoryIcon from "../assets/sidebarIcons/inventoryicon.svg";
 import procurementIcon from "../assets/sidebarIcons/procurementIcon.svg";
+import { NavCTA } from "./navCTA";
 
 export const NavBar = () => {
   const [showSideBar, setSideBar] = useState(false);
@@ -76,10 +77,12 @@ export const NavBar = () => {
   const showSidebarClassName = "sidebarBTN";
 
   return (
-    <nav className=" px-2 py-4">
+    <nav className=" px-2 py-4 border border-borderGray lg:p-4 w-full mb-4 fixed lg:w-[calc(100vw-238px)] top-0 z-20">
       <div className=" flex items-center justify-between">
         {/* logo */}
-        <Logo />
+        <div className="lg:hidden">
+          <Logo />
+        </div>
         {/* menu button */}
         <button
           onClick={() => setSideBar(!showSideBar)}
@@ -87,6 +90,10 @@ export const NavBar = () => {
         >
           <IoMdMenu className=" text-primaryBlue" size={30} />
         </button>
+        {/* nav cta */}
+        <div className=" lg:ml-auto lg:w-[60%] hidden lg:block">
+          <NavCTA />
+        </div>
       </div>
       <SideBar
         {...{ showSideBar, setSideBar, showSidebarClassName, linksData }}
@@ -97,8 +104,8 @@ export const NavBar = () => {
 
 export const Logo = () => {
   return (
-    <div className=" w-[50%] lg:w-[80%] lg:mb-6 lg:pl-2 ">
-      <img src={mapLogoBlue} alt="site logo" className="block" />
+    <div className=" lg:mb-6 lg:pl-2 ">
+      <img src={mapLogoBlue} alt="site logo" className="block w-full" />
     </div>
   );
 };
