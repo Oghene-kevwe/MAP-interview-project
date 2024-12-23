@@ -6,10 +6,10 @@ import dropdown from "../assets/dropdown.svg";
 
 export const NavCTA = () => {
   return (
-    <div className=" flex flex-col gap-3 mb-4 lg:flex-row lg:justify-between w-full">
+    <div className=" flex flex-col gap-3 mb-4 lg:mb-0 lg:flex-row lg:justify-between w-full">
       {/* buttons */}
-      <div className=" flex gap-x-2 justify-between items-center order-2">
-        <div className=" flex gap-x-2 items-center">
+      <div className=" flex gap-x-4 justify-between items-center order-2">
+        <div className=" flex gap-x-4 items-center">
           <button>
             <img src={bellIcon} alt="bell" />
           </button>
@@ -24,7 +24,7 @@ export const NavCTA = () => {
       </div>
 
       {/* search */}
-      <div className=" border border-borderGray w-full relative rounded-md ">
+      <div className=" border border-borderGray w-full relative rounded-md shadow-sm max-w-[450px] ">
         {/* search Icon */}
         <img
           src={searchIcon}

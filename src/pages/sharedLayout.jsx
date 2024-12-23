@@ -8,7 +8,7 @@ export const SharedLayout = () => {
       <ScrollToTopOnPageChange />
       <div className="lg:w-[calc(100vw-238px)] lg:ml-auto ">
         <NavBar />
-        <div className=" pt-[55px] md:pt-[75px] pb-10 px-[2vw]">
+        <div className=" pt-[75px] pb-10 px-4 lg:px-8">
           <Outlet />
         </div>
       </div>

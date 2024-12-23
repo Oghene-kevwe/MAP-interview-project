@@ -1,6 +1,5 @@
+import { Procurement } from "../components/procurement/procurement";
 
 export const Homepage = () => {
-  return (
-    <div>homepage</div>
-  )
-}
+  return <Procurement />;
+};

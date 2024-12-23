@@ -77,7 +77,7 @@ export const NavBar = () => {
   const showSidebarClassName = "sidebarBTN";
 
   return (
-    <nav className=" px-2 py-4 border border-borderGray lg:p-4 w-full mb-4 fixed lg:w-[calc(100vw-238px)] top-0 z-20">
+    <nav className=" bg-white px-2 py-4 border border-borderGray lg:p-2 lg:pr-8 w-full mb-4 fixed lg:w-[calc(100vw-238px)] top-0 z-20">
       <div className=" flex items-center justify-between">
         {/* logo */}
         <div className="lg:hidden">
