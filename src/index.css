@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.globalTransitions {
+  @apply transition-all duration-300 ease-out;
+}
+body {
+  background: #ffffff;
+}
