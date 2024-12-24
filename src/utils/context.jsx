@@ -12,6 +12,32 @@ export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, defaultState);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const steps = [
+    {
+      id: 1,
+      info: "Request Information",
+      subtitle: "Provide details about the RFQ",
+    },
+    {
+      id: 2,
+      info: "Terms and Attachments",
+      subtitle: "Payment and delivery terms",
+    },
+    {
+      id: 3,
+      info: "Review",
+      subtitle: "Confirm all information provided",
+    },
+  ];
+
+  function handleContinue() {
+    if (currentStep < steps.length) {
+      setCurrentStep(currentStep + 1);
+    }
+  }
+
   useEffect(() => {
     // Add an event listener to update the window width when it changes
     window.addEventListener("resize", handleResize);
@@ -31,6 +57,10 @@ export const AppProvider = ({ children }) => {
         ...state,
         dispatch,
         windowWidth,
+        steps,
+        handleContinue,
+        currentStep,
+        setCurrentStep,
       }}
     >
       {children}

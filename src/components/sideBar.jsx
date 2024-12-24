@@ -95,7 +95,11 @@ export const SideBar = ({
               {/* dropdown */}
               {dropdown && (
                 <button>
-                  <img src={dropdownIcon} alt="dropdown" />
+                  <img
+                    src={dropdownIcon}
+                    alt="dropdown"
+                    className={`${activePageId == id ? " rotate-180" : null}`}
+                  />
                 </button>
               )}
 
@@ -109,13 +113,13 @@ export const SideBar = ({
 
             {/* sublink */}
             {sublink && activeSubLinkId === id && (
-              <div className="flex flex-col gap-2 pl-9">
+              <div className="flex flex-col gap-2">
                 {sublink.map(({ id: subId, linkName, linkUrl }) => (
                   <Link
                     key={subId}
                     to={linkUrl}
                     onClick={() => handleSubLink(subId)}
-                    className={` rounded-md p-2 ${
+                    className={` rounded-md p-2 pl-9 ${
                       sublinkPageId == subId
                         ? "bg-primaryGray"
                         : "bg-transparent hover:bg-primaryGray"

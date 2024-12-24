@@ -41,13 +41,13 @@ export const QouteItems = () => {
   ];
 
   return (
-    <article className=" border border-borderGray rounded-lg p-4">
+    <article className=" componentBorder">
       {/* header */}
       <div className=" flex justify-between items-center mb-8">
-        <h2 className="font-bold text-lg md:text-xl ">Items(s)</h2>
+        <h2 className="font-bold text-lg md:text-xl ">Item(s)</h2>
       </div>
       {/* table */}
-      <div className=" overflow-auto">
+      <div className=" overflow-auto qouteItems">
         <table className="w-full border-separate border-spacing-0  rounded-md">
           <thead>
             <tr className=" bg-primaryGray50  text-xs text-primaryGray700">

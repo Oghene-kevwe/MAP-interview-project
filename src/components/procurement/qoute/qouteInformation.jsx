@@ -49,9 +49,9 @@ export const QouteInformation = () => {
         {/* details */}
         <div className=" flex flex-col gap-y-4  ">
           {qouteInfo.slice(0, 5).map(({ title, detail, id, postHeld }) => (
-            <div className=" grid grid-cols-2 font-medium  pr-12">
+            <div key={id} className=" grid grid-cols-2 font-medium  pr-12">
               <p className="text-[#555E68]  w-[50%]  ">{title}</p>
-              <p className="text-[#344054] shrink-0 flex gap-x-2 items-center">
+              <div className="text-[#344054] shrink-0 flex gap-x-2 items-center">
                 {/* initials */}{" "}
                 {id == 2 && (
                   <span className=" shrink-0 bg-primaryOrange rounded-full w-[32px] h-[32px] grid place-items-center font-bold text-sm">
@@ -71,7 +71,7 @@ export const QouteInformation = () => {
                     </span>
                   </p>
                 )}
-              </p>
+              </div>
             </div>
           ))}
         </div>

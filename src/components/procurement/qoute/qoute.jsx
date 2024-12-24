@@ -3,6 +3,7 @@ import { QouteInformation } from "./qouteInformation";
 import { QouteItems } from "./qouteItems";
 import signIcon from "../../../assets/sign-doc.svg";
 import dropdown from "../../../assets/dropdown.svg";
+import { Link } from "react-router-dom";
 
 export const Qoute = () => {
   return (
@@ -17,9 +18,12 @@ export const Qoute = () => {
         </h2>
         {/* buttons */}
         <div className="text-white flex text-sm font-bold gap-4">
-          <button className="bg-primaryBlue rounded-[10px] w-[90px]  p-2 h-fit ">
+          <Link
+            to={"/qoute-response"}
+            className="bg-primaryBlue rounded-[10px] w-[90px]  p-2 h-fit grid place-items-center "
+          >
             Respond
-          </button>
+          </Link>
           <button className="bg-primaryRed rounded-[10px] p-2 w-[90px] flex items-center justify-center gap-x-2 h-fit">
             <img src={cancelIcon} alt="cancel" />
             Reject
@@ -30,7 +34,7 @@ export const Qoute = () => {
       <QouteInformation />
       <QouteItems />
       {/* term attachment */}
-      <article className=" border border-borderGray rounded-lg p-4 flex justify-between">
+      <article className=" componentBorder flex justify-between">
         <div className=" flex items-center gap-x-2">
           <img src={signIcon} alt="sign doc" />
           {/* detail */}
