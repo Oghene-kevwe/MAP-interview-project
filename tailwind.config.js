@@ -12,6 +12,7 @@ export default {
         primaryGray50: "#F9FAFB",
         primaryGray100: "#F0F2F5",
         primaryGray300: "#D0D5DD",
+        primaryGray400: "#98A2B3",
         primaryGray500: "#667185",
         primaryGray600: "#475367",
         primaryGray700: "#344054",

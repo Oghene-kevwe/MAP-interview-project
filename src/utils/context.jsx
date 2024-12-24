@@ -11,6 +11,10 @@ const defaultState = {
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, defaultState);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [responseJsons, setResponseJsons] = useState({});
+  const [globalLoading, setGlobalLoading] = useState(false);
+  const [showConfirmSubmitModal, setShowConfirmSubmitModal] = useState(false);
+  const [showSubmitSuccess, setshowSubmitSuccess] = useState(false);
 
   const [currentStep, setCurrentStep] = useState(1);
 
@@ -61,6 +65,14 @@ export const AppProvider = ({ children }) => {
         handleContinue,
         currentStep,
         setCurrentStep,
+        responseJsons,
+        setResponseJsons,
+        globalLoading,
+        setGlobalLoading,
+        showConfirmSubmitModal,
+        setShowConfirmSubmitModal,
+        showSubmitSuccess,
+        setshowSubmitSuccess,
       }}
     >
       {children}

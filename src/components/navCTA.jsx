@@ -6,9 +6,9 @@ import dropdown from "../assets/dropdown.svg";
 
 export const NavCTA = () => {
   return (
-    <div className=" flex flex-col gap-3 mb-4 lg:mb-0 lg:flex-row lg:justify-between w-full">
+    <div className=" flex flex-col gap-3 mb-4 lg:mb-0 lg:flex-row lg:justify-between w-full  lg:pl-6 ">
       {/* buttons */}
-      <div className=" flex gap-x-4 justify-between items-center order-2">
+      <div className="  flex gap-x-4 justify-between items-center order-2">
         <div className=" flex gap-x-4 items-center">
           <button>
             <img src={bellIcon} alt="bell" />

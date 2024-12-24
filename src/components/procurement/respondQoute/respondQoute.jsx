@@ -5,7 +5,7 @@ import { Review } from "./review";
 import { RequestInformation } from "./requestInformation";
 
 export const RespondQoute = () => {
-  const { steps, currentStep } = useGlobalContext();
+  const { steps, currentStep, setCurrentStep } = useGlobalContext();
 
   return (
     <section>
@@ -32,13 +32,14 @@ export const RespondQoute = () => {
               {id}
             </p>
             <div>
-              <h1
-                className={` text-primaryGray900 ${
+              <button
+                onClick={() => setCurrentStep(id)}
+                className={` text-primaryGray900 block ${
                   currentStep === id ? "font-bold" : "font-medium"
                 } `}
               >
                 {info}
-              </h1>
+              </button>
               <span
                 className={` text-sm  ${
                   currentStep === id ? "text-[#475367]" : "text-primaryGray500"
